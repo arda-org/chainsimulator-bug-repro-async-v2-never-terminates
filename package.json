@@ -1,0 +1,15 @@
+{
+    "private": "true",
+    "scripts": {
+      "install-rust": "xsuite install-rust",
+      "build": "xsuite build --dir caller && xsuite build --dir callee",
+      "test": "vitest run"
+    },
+    "dependencies": {
+      "@types/node": "^20.12.12",
+      "typescript": "^5.4.2",
+      "vitest": "^1.5.3",
+      "xsuite": "^0.0.67"
+    }
+  }
+  
