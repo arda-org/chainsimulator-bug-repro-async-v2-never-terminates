@@ -2,7 +2,7 @@
     "private": "true",
     "scripts": {
       "install-rust": "xsuite install-rust",
-      "build": "xsuite build --dir caller && xsuite build --dir callee",
+      "build": "xsuite build",
       "test": "vitest run"
     },
     "dependencies": {

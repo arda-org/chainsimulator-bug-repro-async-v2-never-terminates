@@ -1,10 +1,10 @@
 [package]
-name = "callee-meta"
+name = "contract-meta"
 version = "0.0.0"
 edition = "2021"
 publish = false
 
-[dependencies.callee]
+[dependencies.contract]
 path = ".."
 
 [dependencies.multiversx-sc-meta]

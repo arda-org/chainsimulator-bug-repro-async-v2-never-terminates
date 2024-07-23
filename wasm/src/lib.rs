@@ -8,7 +8,8 @@
 // Upgrade:                              1
 // Endpoints:                            2
 // Async Callback (empty):               1
-// Total number of exported functions:   5
+// Promise callbacks:                    1
+// Total number of exported functions:   6
 
 #![no_std]
 
@@ -16,12 +17,13 @@ multiversx_sc_wasm_adapter::allocator!();
 multiversx_sc_wasm_adapter::panic_handler!();
 
 multiversx_sc_wasm_adapter::endpoints! {
-    callee
+    contract
     (
         init => init
         upgrade => upgrade
-        iterate_on_callees => iterate_on_callees
-        callee_iteration_event => callee_iteration_event
+        caller_endpoint => caller_endpoint
+        callee_endpoint => callee_endpoint
+        caller_callback => caller_callback
     )
 }
 
