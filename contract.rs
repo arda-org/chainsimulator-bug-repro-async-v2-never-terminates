@@ -8,7 +8,7 @@ pub trait Contract {
     fn init(&self) {}
 
     #[endpoint]
-    fn caller_endpoint_async_v2(&self, callee: ManagedAddress, gas: u64) {
+    fn call_callee_async_v2(&self, callee: ManagedAddress, gas: u64) {
         self.tx()
             .to(callee)
             .gas(gas)
@@ -17,7 +17,7 @@ pub trait Contract {
     }
 
     #[endpoint]
-    fn caller_endpoint_async_v1(&self, callee: ManagedAddress) {
+    fn call_callee_async_v1(&self, callee: ManagedAddress) {
         self.tx()
             .to(callee)
             .raw_call("nonExistentEndpoint")

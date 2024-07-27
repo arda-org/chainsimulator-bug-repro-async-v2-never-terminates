@@ -18,8 +18,8 @@ multiversx_sc_wasm_adapter::endpoints! {
     contract
     (
         init => init
-        caller_endpoint_async_v2 => caller_endpoint_async_v2
-        caller_endpoint_async_v1 => caller_endpoint_async_v1
+        call_callee_async_v2 => call_callee_async_v2
+        call_callee_async_v1 => call_callee_async_v1
     )
 }
 
