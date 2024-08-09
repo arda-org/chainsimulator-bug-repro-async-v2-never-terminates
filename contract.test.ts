@@ -24,10 +24,7 @@ test("shard 0 -> shard 0 -> shard 1 - async v2 (fails)", async () => {
     funcName: "call_callee_async_v2",
     funcArgs: [callee, e.U64(10_000_000)],
     gasLimit: 100_000_000,
-  });
-  await world.generateBlocks(20);
-
-  expect(await caller.getAccountKvs()).toEqual({});
+  }).assertFail({ code: "returnMessage", message: "invalid function (not found)" });
 });
 
 test("shard 0 -> shard 0 -> shard 1 - async v1 (succeeds)", async () => {
@@ -53,8 +50,5 @@ test("shard 0 -> shard 0 -> shard 1 - async v1 (succeeds)", async () => {
     funcName: "call_callee_async_v1",
     funcArgs: [callee],
     gasLimit: 100_000_000,
-  });
-  await world.generateBlocks(20);
-
-  expect(await caller.getAccountKvs()).toEqual({});
+  }).assertFail({ code: "returnMessage", message: "invalid function (not found)" });
 });

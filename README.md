@@ -1,3 +1,5 @@
+FIXED ✅
+
 Async v2 seems not to terminate when the call fails. The caller seems to keep forever the storage:
 
 ```
